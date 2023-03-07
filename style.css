@@ -23,7 +23,7 @@ body{
     width: 20rem;
     box-shadow: 5px 5px 10px 03px rgba(46, 45, 45, 0.202);
     text-decoration: solid;
-    caret-color: #fff;
+    caret-color: #020202;
     pointer-events: auto;
     font-weight:bold;
 }
@@ -55,11 +55,15 @@ body{
 
   
   .searchbar-container.active .autocom-box{
-    padding: 10px 8px;
+    
     opacity: 1;
     pointer-events: auto;
     background-color: rgba(237, 228, 228, 0.528);
-    max-height: 25%;
+    
+
+  }
+  ::-webkit-scrollbar.searchbar-container.active .autocom-box{
+    display: none;
   }
   .autocom-box li{
     list-style: none;
@@ -68,6 +72,7 @@ body{
     width: 100%;
     cursor: default;
     border-radius: 3px;
+    font-size: smaller;
   }
   .searchbar-container.active .autocom-box li{
     display: block;
@@ -81,12 +86,31 @@ body{
     align-items: center;
   }
 
+  h1{
+    display: grid;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: none;
+    color: white;
+  }
+
   .navbar{
     border-radius:10px;
     background-color: rgba(46, 45, 45, 0.202);
-    height: 40px;
+    display: flex;
     
   }
+  .navbar button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+  }
+  .navbar button:hover{
+    
+  }
+  
+ 
 
   .navbar a{
     color: #f6f6f6;
@@ -94,6 +118,4 @@ body{
     padding-bottom: 0;
     text-decoration: none;
   }
-  .navbar a:hover{
-    color: rgba(237, 228, 228, 0.202);
-  }
+
